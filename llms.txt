@@ -1,0 +1,15 @@
+# MinisSkills
+
+> **Why the description matters:** The `description` field is the primary trigger mechanism. Claude reads the skill name + description to decide whether to load t
+
+## Repository
+
+- MinisSkills: https://github.com/zhaoxinghua09-cell/MinisSkills (**Why the description matters:** The `description` field is the primary trigger mechanism. Claude reads the skill name + description to decide whether to load t)
+
+## Ecosystem / 生态
+
+- awesome-trusted-agents: https://github.com/zhaoxinghua09-cell/awesome-trusted-agents
+- lgd-hub: https://github.com/zhaoxinghua09-cell/lgd-hub
+- lgd-skill-marketplace: https://github.com/zhaoxinghua09-cell/lgd-skill-marketplace
+- governanceos: https://github.com/zhaoxinghua09-cell/governanceos
+- skillgate: https://github.com/zhaoxinghua09-cell/skillgate
