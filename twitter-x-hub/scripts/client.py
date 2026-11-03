@@ -10,6 +10,7 @@ Changes vs upstream:
 """
 
 from __future__ import annotations
+import os
 
 import json
 import logging
@@ -36,11 +37,10 @@ logger = logging.getLogger(__name__)
 
 # ── Constants ────────────────────────────────────────────────────────────
 
-BEARER_TOKEN = (
-    "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs"
-    "%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
-)
-
+BEARER_TOKEN = os.environ.get("TWITTER_BEARER_TOKEN", "").strip()
+# 安全修复：凭证不再硬编码于仓库（2026-11-03）。
+# 使用前设置环境变量：export TWITTER_BEARER_TOKEN="<token>"，否则 Twitter/X 请求将失败。
+# skillgate: ignore（本行说明性文本，非凭证）
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "

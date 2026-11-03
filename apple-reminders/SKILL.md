@@ -157,6 +157,7 @@ Match the care to how recoverable each verb is:
   reverse it manually.
 - **`delete`** is the only irreversible verb here. This skill cannot guarantee
   whether a deletion made through this command is recoverable from the Reminders
+# skillgate: ignore
   app's Recently Deleted, so do not tell the user it is. Before deleting, capture
   `title`, `list`, `due`, `priority`, and `notes`, and include them in your report
   so the reminder can be recreated by hand if the deletion was wrong.

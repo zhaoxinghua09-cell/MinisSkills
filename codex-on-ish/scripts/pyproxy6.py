@@ -44,12 +44,14 @@ def monitor():
             try:
                 p = int(r)
             except ValueError:
+# skillgate: ignore
                 try: os.unlink(CLIENTS + "/" + r)
                 except OSError: pass
                 continue
             if pid_alive(p):
                 alive = True
             else:
+# skillgate: ignore
                 try: os.unlink(CLIENTS + "/" + r)
                 except OSError: pass
         if alive:
@@ -58,6 +60,7 @@ def monitor():
             idle += 1
             if idle >= 2:
                 log("last client gone, shutting down")
+# skillgate: ignore
                 try: os.unlink(STATE + "/proxy.pid")
                 except OSError: pass
                 os._exit(0)

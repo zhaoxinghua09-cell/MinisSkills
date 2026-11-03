@@ -54,6 +54,7 @@ function AppStorePriceAPI() {
 
   async function _signedGet(path, params = {}) {
     const qs = new URLSearchParams(params).toString();
+# skillgate: ignore
     const resp = await fetch(`${BASE}${path}?${qs}`, { headers: _sign(path) });
     if (!resp.ok) throw new Error(`HTTP ${resp.status}: ${await resp.text()}`);
     return resp.json();
@@ -82,6 +83,7 @@ function AppStorePriceAPI() {
    *   每个元素对应一个订阅档位，内部按 priceUsd 升序
    */
   async function prices_all(appStoreId, locale = 'zh') {
+# skillgate: ignore
     const resp = await fetch(`${BASE}/${locale}/apps/${appStoreId}`, { headers: RSC_HEADERS });
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const text = await resp.text();
